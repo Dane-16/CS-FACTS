@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Computer Science Careers & Facts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Computer Science Facts & Careers</h1>
+    <p>Explore what you study and the exciting jobs you can pursue</p>
+  </header>
+
+  <main>
+    <section class="facts">
+      <h2>Interesting Facts About Computer Science</h2>
+      <ul>
+        <li>Computer Science is the study of algorithms, data structures, and the principles of software and hardware design.</li>
+        <li>It drives innovation in fields like artificial intelligence, cybersecurity, and data science.</li>
+        <li>CS graduates are among the highest paid and most in-demand professionals worldwide.</li>
+        <li>Programming languages like Python, Java, and C++ are fundamental tools in CS education.</li>
+        <li>Computer Science impacts nearly every industry, from healthcare to finance to entertainment.</li>
+        <li>The first computer programmer was Ada Lovelace in the 1840s, working on Charles Babbage's analytical engine.</li>
+      </ul>
+    </section>
+
+    <section class="studies">
+      <h2>What You Study in Computer Science</h2>
+      <p>Computer Science programs provide comprehensive education in:</p>
+      <ul>
+        <li><strong>Programming Fundamentals:</strong> Algorithms, data structures, and software development principles</li>
+        <li><strong>Systems Architecture:</strong> Computer organization, operating systems, and network fundamentals</li>
+        <li><strong>Data Management:</strong> Database systems, data mining, and information retrieval</li>
+        <li><strong>Artificial Intelligence:</strong> Machine learning, neural networks, and intelligent systems</li>
+        <li><strong>Cybersecurity:</strong> Network security, cryptography, and ethical hacking</li>
+        <li><strong>Theoretical Foundations:</strong> Discrete mathematics, computation theory, and algorithm analysis</li>
+        <li><strong>Software Engineering:</strong> Project management, agile methodologies, and quality assurance</li>
+        <li><strong>Human-Computer Interaction:</strong> UX design, usability testing, and interface development</li>
+      </ul>
+    </section>
+
+    <section class="careers-info">
+  <h2>Career Information in Computer Science</h2>
+  <div class="career-stats">
+    <div class="stat-card">
+      <h3>Job Growth</h3>
+      <p class="stat-number">15%</p>
+      <p>Projected growth (2021-2031) - Much faster than average</p>
+    </div>
+    <div class="stat-card">
+      <h3>Median Salary</h3>
+      <p class="stat-number">Php 617,000</p>
+      <p>Annual median wage for computer occupations. </p>
+    </div>
+    <div class="stat-card">
+      <h3>Demand</h3>
+      <p class="stat-number">High</p>
+      <p>Consistently ranked among top in-demand fields</p>
+    </div>
+  </div>
+
+
+  <div class="skills-section">
+    <h3>Essential Skills for CS Careers</h3>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h4>Technical Skills</h4>
+        <ul>
+          <li>Programming Languages (Python, Java, JavaScript, C++)</li>
+          <li>Database Management (SQL, NoSQL)</li>
+          <li>Cloud Platforms (AWS, Azure, Google Cloud)</li>
+          <li>Version Control (Git)</li>
+          <li>DevOps Tools</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h4>Soft Skills</h4>
+        <ul>
+          <li>Problem Solving & Critical Thinking</li>
+          <li>Communication & Collaboration</li>
+          <li>Creativity & Innovation</li>
+          <li>Time Management</li>
+          <li>Continuous Learning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Career Opportunities After Graduation</h2>
+  <div class="jobs-grid" id="jobsGrid">
+    <!-- Job cards will be inserted here by JavaScript -->
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Computer Science Careers. All rights reserved.</p>
+  <p>Discover your future in technology!</p>
+</footer>
+
+<script>
+
+  // Set current year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const occupations = [
+  {
+    title: "Software Developer",
+     image: "software developer.jpg", 
+    desc: "Designs, codes, and tests software applications and systems. Average salary: $110,000+"
+  },
+  {
+    title: "Data Scientist",
+    image: "data scientist.jpg",
+    desc: "Analyzes complex data to help organizations make informed decisions. Average salary: $120,000+"
+  },
+  {
+    title: "Cybersecurity Analyst",
+    image: "cybersecurity.jpg",
+    desc: "Protects computer systems and networks from cyber threats. Average salary: $105,000+"
+  },
+  {
+    title: "Systems Analyst",
+    image: "system analyst.jpg",
+    desc: "Analyzes and designs IT solutions to improve business processes. Average salary: $95,000+"
+  },
+  {
+    title: "AI/ML Engineer",
+    image: "ai engineer.jpg",
+    desc: "Builds intelligent systems using AI and machine learning. Average salary: $130,000+"
+  },
+  {
+    title: "Database Administrator",
+    image: "database administrator.jpg",
+    desc: "Manages and maintains database systems for optimal performance. Average salary: $98,000+"
+  },
+  {
+    title: "Web Developer",
+    image: "web developer.jpg",
+    desc: "Creates and maintains responsive websites and web applications. Average salary: $85,000+"
+  },
+  {
+    title: "Network Engineer",
+    image: "network engineer.jpg",
+    desc: "Designs, implements, and manages computer networks. Average salary: $92,000+"
+  },
+  {
+    title: "DevOps Engineer",
+    image: "devops engineer.jpg",
+    desc: "Bridges development and operations for efficient software delivery. Average salary: $115,000+"
+  },
+  {
+    title: "UX/UI Designer",
+    image: "ux designer.jpg",
+    desc: "Designs user-friendly interfaces and improves user experience. Average salary: $90,000+"
+  },
+  {
+    title: "Computer Vision Engineer",
+    image: "computer vision.jpg",
+    desc: "Develops systems that can interpret and process visual information. Average salary: $125,000+"
+  },
+  {
+    title: "Game Developer",
+    image: "game developer.jpg",
+    desc: "Creates interactive games for consoles, PCs, or mobile devices. Average salary: $90,000+"
+  },
+  {
+    title: "Cloud Solutions Architect",
+    image: "cloud solution.jpg",
+    desc: "Designs and manages scalable cloud infrastructure. Average salary: $140,000+"
+  },
+  {
+    title: "IT Project Manager",
+    image: "it project manager.jpg",
+    desc: "Oversees and coordinates IT projects across teams. Average salary: $110,000+"
+  },
+  {
+    title: "Robotics Engineer",
+    image: "robotics engineer.jpg",
+    desc: "Designs robotic systems for automation and manufacturing. Average salary: $100,000+"
+  },
+{
+    title: "Blockchain Developer",
+    image: "blockhain.jpg",
+    desc: "Develops decentralized applications and blockchain protocols. Average salary: $125,000+"
+  },
+  {
+    title: "Mobile App Developer",
+    image: "mobile app dev.jpg",
+    desc: "Builds applications for Android and iOS platforms. Average salary: $100,000+"
+  },
+  {
+    title: "Computer Hardware Engineer",
+    image: "computer hardware engineer.jpg",
+    desc: "Designs and tests physical components of computers. Average salary: $117,000+"
+  },
+  {
+    title: "IT Support Specialist",
+    image: "it support.jpg",
+    desc: "Provides tech support and troubleshooting for users. Average salary: $55,000+"
+  },
+  {
+    title: "Information Systems Manager",
+    image: "info system manager.jpg",
+    desc: "Oversees and coordinates organizational IT strategy. Average salary: $150,000+"
+  }
+
+];
+
+
+  // Render job cards
+  const jobsGrid = document.getElementById('jobsGrid');
+
+  occupations.forEach(job => {
+    const card = document.createElement('div');
+    card.className = 'job-card';
+    card.innerHTML = `
+      <img src="${job.image}" alt="${job.title}">
+      <h4>${job.title}</h4>
+      <p>${job.desc}</p>
+    `;
+    jobsGrid.appendChild(card);
+  });
+</script>
+
